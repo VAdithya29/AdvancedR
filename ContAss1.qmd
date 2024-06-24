@@ -33,9 +33,9 @@ plot(cars$speed, cars$dist,
      main = "Scatter Plot of Speed vs Stopping Distance",
      xlab = "Speed (mph)",
      ylab = "Stopping Distance (ft)",
-     pch = 19, col = "blue")
+     pch = 19, col = "red")
 # Adding the line of regression
-abline(lm(dist ~ speed, data = cars), col = "red")
+abline(lm(dist ~ speed, data = cars), col = "blue")
 
 ```
 
