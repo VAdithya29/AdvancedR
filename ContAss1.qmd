@@ -1,0 +1,44 @@
+---
+title: "Cars"
+format: html
+editor: visual
+---
+
+## Introduction
+
+The cars dataset in R provides data on the speed of cars and the distances taken to stop. This dataset consists of 50 observations on 2 variables:
+
+-   `speed`: The speed of the car (in mph)
+-   `dist`: The stopping distance (in ft)
+
+In this document, we will create a scatter plot of the cars dataset to visualize the relationship between the speed of cars and their stopping distances. We will also include some descriptive statistics of these variables.
+
+## Summary
+
+First, let's look at some basic statistics of the cars dataset.
+
+```{r echo = FALSE}
+summary(cars)
+```
+
+The output of the summary function gives us an overview of the minimum, maximum, mean, and quartiles for both the speed and dist variables.
+
+## Scatter Plot of Speed vs Stopping Distance
+
+Let's create a **scatter plot** to **visualize** the relationship between the **speed** of the cars and their **stopping distances**.
+
+```{r echo = FALSE}
+#Plotting the resulting graph
+plot(cars$speed, cars$dist, 
+     main = "Scatter Plot of Speed vs Stopping Distance",
+     xlab = "Speed (mph)",
+     ylab = "Stopping Distance (ft)",
+     pch = 19, col = "blue")
+# Adding the line of regression
+abline(lm(dist ~ speed, data = cars), col = "red")
+
+```
+
+## Conclusion
+
+The *scatter plot and the regression line indicate a positive relationship* between the speed of a car and its stopping distance. This means that *as the speed of the car increases, the stopping distance tends to increase as well*. This is a reasonable finding since higher speeds generally require longer distances to come to a complete stop.
