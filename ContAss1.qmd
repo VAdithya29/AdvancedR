@@ -38,6 +38,8 @@ plot(cars$speed, cars$dist,
 abline(lm(dist ~ speed, data = cars), col = "blue")
 
 ```
+The graph describes the correlation between the speed of a car in miles and the stopping distance in feet. They seem to be positively correlated.\n The regression line does not provide a perfect fit, as expected as different cars have different capabilities. There is one special outlier as one of the cars travelling at about 24mph has a stopping distance if about 120ft, which is very high compares to the other cars travelling at a similar speed.
+
 
 ## Conclusion
 
